@@ -1,0 +1,429 @@
+/***********************************************************/
+/************************* GLOBAL***************************/
+/***********************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+    background: #000000 url('../fundo/fundoprofilerz.png') center/cover no-repeat fixed;
+}
+
+
+/***********************************************************/
+/************************* TELA INC ************************/
+/***********************************************************/
+
+#intro-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.452), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+#intro-screen h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#intro-screen p {
+    color: #aaa;
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 80%;
+}
+
+/***********************************************************/
+/***********************************************************/
+/***********************************************************/
+
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+}
+
+.container .card {
+    width: 300px;
+    height: 450px;
+    padding: 20px;
+    margin: 45px;
+    border-radius: 30px;
+    transform-style: preserve-3d;
+}
+
+.container .card1 {
+    margin-left: 110px;
+}
+
+
+/***********************************************************/
+/******************* CONTROLE DE MÚSICA ********************/
+/***********************************************************/
+.music-control {
+    position: fixed;
+    bottom: 45%;
+    /* Fixo na parte inferior */
+    left: 68px;
+    /* Centraliza horizontalmente */
+    transform: translateX(-50%);
+    /* Ajuste fino do centro */
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.151), rgba(0, 0, 0, 0.322));
+    -webkit-backdrop-filter: blur(10px);
+    border: 3px solid #cacaca57;
+    padding: 15px 20px;
+    border-radius: 0px 20px 20px 0px;
+    width: 150px;
+}
+
+#muteBtn {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-right: 40px;
+}
+
+.volume-control {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 60px;
+}
+
+#volumeSlider {
+    width: 86px;
+    height: 5px;
+    -webkit-appearance: none;
+    background: #cacaca;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+#volumeSlider:hover {
+    opacity: 1;
+}
+
+#volumeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+/***********************************************************/
+/************************* CARD 1 **************************/
+/***********************************************************/
+.container .card1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.151), rgba(0, 0, 0, 0.322));
+    -webkit-backdrop-filter: blur(10px);
+    border: 3px solid #cacaca57;
+}
+
+.container .card1 h2 {
+    color: #fff;
+}
+
+.container .card img.produto {
+    max-width: 100px;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: .5s;
+}
+
+.verified-badge {
+    color: #3897f0;
+    font-size: 0.8em;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.container .card:hover img.produto,
+.container .card:hover button,
+.card:hover .social-buttons {
+    transform: translate3d(0, 0, 100px);
+}
+
+.container .card button {
+    padding: 10px 40px;
+    background-color: rgba(255, 255, 255, 0.815);
+    border: 0;
+    border-radius: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    color: #000000;
+    font-weight: 800;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .5s;
+    transform-style: preserve-3d;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+    transition: .5s;
+    transform-style: preserve-3d;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.instagram {
+    background: #cb76d33f;
+    border: 1px solid #cacaca57;
+}
+
+.youtube {
+    background: #ff000057;
+    border: 1px solid #cacaca57;
+}
+
+.twitch {
+    background: #6347ca50;
+    border: 1px solid #6200ffcc;
+}
+
+.discord {
+    background: #2436da83;
+    border: 1px solid #ffffff57;
+}
+
+.social-btn:hover {
+    transform: scale(1.1) translateY(-5px);
+}
+
+
+/***********************************************************/
+/************************* CARD 2 **************************/
+/***********************************************************/
+.container .card2 {
+    width: 700px;
+    height: 450px;
+}
+
+.card2 h2 {
+    background: linear-gradient(90deg, #fff 0, #d3d3d3 25%, #181818 50%, #c7c7c7 75%, #292929 100%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: 5s linear infinite rgbAnimation;
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+@keyframes rgbAnimation {
+
+    0%,
+    100% {
+        background-position: 0 0
+    }
+
+    50% {
+        background-position: 100% 100%
+    }
+}
+
+.container div.card2 {
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.151), rgba(0, 0, 0, 0.322));
+    -webkit-backdrop-filter: blur(10px);
+    border: 3px solid #cacaca57;
+}
+
+/***************** ITENS PC ETC... **************/
+.peripherals-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.peripheral-item {
+    width: 110px;
+    height: 110px;
+    perspective: 1000px;
+    background: transparent !important;
+    border: none !important;
+}
+
+.peripheral-item-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.peripheral-item:hover .peripheral-item-inner {
+    transform: rotateY(180deg);
+}
+
+.peripheral-item-front,
+.peripheral-item-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.363);
+    border: 3px solid #cacaca57;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.peripheral-item-back {
+    transform: rotateY(180deg);
+    background: rgba(0, 0, 0, 0.5);
+    color: #d3d3d3;
+    font-size: 12px;
+    text-align: center;
+    padding: 15px;
+    line-height: 1.4;
+}
+
+.peripheral-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.peripheral-icon img {
+    filter: brightness(0) invert(1);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.peripheral-text {
+    font-weight: bold;
+    color: #d3d3d3;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+
+/***********************************************************/
+/*************** Estilos para a janela modal ***************/
+/***********************************************************/
+.janela-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.janela-modal .modal {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid #333;
+}
+
+.janela-modal .modal h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.janela-modal .modal p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.janela-modal .fechar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.janela-modal .fechar:hover {
+    background: #555;
+}
+
+.janela-modal.abrir {
+    display: flex;
+}
+
+/***********************************************************/
+/************************ BY RZHARO ************************/
+/***********************************************************/

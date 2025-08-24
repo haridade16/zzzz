@@ -1,0 +1,248 @@
+<!------------------------------------------------>
+<!----------------- BY RZHARO -------------------->
+<!------------------------------------------------>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"
+        integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Para .ico -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Para .png ou .svg -->
+    <link rel="icon" href="assets/imagens/logo.png" type="image/png">
+
+    <!-------------- Subtitulo -------------->
+    <title>Rzharo</title>
+    <!---------------------------------------->
+
+    <!-------------- Auto Music -------------->
+    <audio id="bgMusic" loop>
+        <source src="assets/musica/musicrztime.mp3" type="audio/mpeg">
+    </audio>
+    <!---------------------------------------->
+</head>
+
+<body>
+    <!-- Tela de introdução -->
+    <div id="intro-screen">
+        <h1>erstellt von rzharo</h1>
+        <p>Klicken Sie irgendwo, um fortzufahren</p>
+    </div>
+
+    <div class="container" style="display: none;">
+
+        <!-------------- Controle de Música -------------->
+        <div class="music-control">
+            <button id="muteBtn" title="Mutar/Desmutar">
+                <i class="fas fa-volume-up"></i>
+            </button>
+            <div class="volume-control">
+                <i class="fas fa-volume-down"></i>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.3" title="Controlar volume">
+                <i class="fas fa-volume-up"></i>
+            </div>
+        </div>
+        <!------------------------------------------------>
+
+        <!------------------------------------------------>
+        <!--------------------- CARD 1 ------------------->
+        <div class="card card1">
+            <h2><i class="fas fa-check-circle verified-badge"></i>biel</h2>
+            <img src="assets/imagens/profile1.gif" alt="" class="produto">
+
+            <div class="social-buttons">
+                <!---- IG ---->
+                <a href="https://www.instagram.com/rzharo/" class="social-btn instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <!---- YT ---->
+                <a href="https://www.youtube.com/@rzharo1" class="social-btn youtube" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+                <!---- TW ---->
+                <a href="https://www.twitch.tv/?lang=pt-br" class="social-btn twitch" target="_blank">
+                    <i class="fab fa-twitch"></i>
+                </a>
+
+                <!---- DC ---->
+                <a href="https://discord.com/invite/pnrb3ZJK8z" class="social-btn discord" target="_blank">
+                    <i class="fab fa-discord"></i>
+                </a>
+            </div>
+            <button onclick="abrirModal()">Info</button>
+        </div>
+        <!------------------------------------------------>
+
+        <!------------------------------------------------>
+        <!--------------------- CARD 2 ------------------->
+        <div class="card card2">
+            <h2>Setup</h2>
+
+            <div class="peripherals-container">
+                <div class="peripheral-item">
+                    <div class="peripheral-item-inner">
+                        <div class="peripheral-item-front">
+                            <div class="peripheral-icon">
+                                <img src="assets/imagens/cpu.png" alt="CPU">
+                            </div>
+                            <div class="peripheral-text">CPU</div>
+                        </div>
+                        <div class="peripheral-item-back">
+                            <p>Ryzen 5 5600G</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="peripheral-item">
+                    <div class="peripheral-item-inner">
+                        <div class="peripheral-item-front">
+                            <div class="peripheral-icon">
+                                <img src="assets/imagens/placa-de-video.png" alt="GPU">
+                            </div>
+                            <div class="peripheral-text">GPU</div>
+                        </div>
+                        <div class="peripheral-item-back">
+                            <p>RTX 4090<br>24GB GDDR6X</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="peripheral-item">
+                    <div class="peripheral-item-inner">
+                        <div class="peripheral-item-front">
+                            <div class="peripheral-icon">
+                                <img src="assets/imagens/ram.png" alt="RAM">
+                            </div>
+                            <div class="peripheral-text">RAM</div>
+                        </div>
+                        <div class="peripheral-item-back">
+                            <p>64GB DDR5<br>6000MHz</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="peripheral-item">
+                    <div class="peripheral-item-inner">
+                        <div class="peripheral-item-front">
+                            <div class="peripheral-icon">
+                                <img src="assets/imagens/ssd.png" alt="SSD">
+                            </div>
+                            <div class="peripheral-text">SSD</div>
+                        </div>
+                        <div class="peripheral-item-back">
+                            <p>2TB NVMe<br>7000MB/s</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="peripheral-item">
+                    <div class="peripheral-item-inner">
+                        <div class="peripheral-item-front">
+                            <div class="peripheral-icon">
+                                <img src="assets/imagens/teclado.png" alt="TECLADO">
+                            </div>
+                            <div class="peripheral-text">TECLADO</div>
+                        </div>
+                        <div class="peripheral-item-back">
+                            <p>Wooting<br>60he+</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="peripheral-item">
+                    <div class="peripheral-item-inner">
+                        <div class="peripheral-item-front">
+                            <div class="peripheral-icon">
+                                <img src="assets/imagens/mouse.png" alt="MOUSE">
+                            </div>
+                            <div class="peripheral-text">MOUSE</div>
+                        </div>
+                        <div class="peripheral-item-back">
+                            <p>G ProX <br>Superlight 2</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="peripheral-item">
+                    <div class="peripheral-item-inner">
+                        <div class="peripheral-item-front">
+                            <div class="peripheral-icon">
+                                <img src="assets/imagens/headset.png" alt="HEADSET">
+                            </div>
+                            <div class="peripheral-text">HEADSET</div>
+                        </div>
+                        <div class="peripheral-item-back">
+                            <p>Lamia 2<br>White</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------------>
+
+    <!------------------------------------------------>
+    <!--------------- PAINEL DE INFO ----------------->
+    <!------------------------------------------------>
+    <div class="janela-modal" id="janela-modal">
+        <div class="modal">
+            <button class="fechar" id="fechar">X</button>
+            <h1>Janela Modal</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum error, hic blanditiis sunt est
+                natus id aliquam, dicta molestias dolores nisi minima dolorem! Pariatur, numquam dolore rerum
+                autem aperiam vel!</p>
+        </div>
+    </div>
+
+    <script src="assets/java/rztimemusic.js"></script>
+    <script>
+        // Função para esconder a tela de introdução
+        document.getElementById('intro-screen').addEventListener('click', function() {
+            this.style.display = 'none';
+            document.querySelector('.container').style.display = 'flex';
+        });
+
+        VanillaTilt.init(document.querySelector(".card"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.5
+        });
+
+        // Funções para controlar a modal
+        function abrirModal() {
+            document.getElementById('janela-modal').style.display = 'flex';
+        }
+
+        function fecharModal() {
+            document.getElementById('janela-modal').style.display = 'none';
+        }
+
+        // Fechar modal ao clicar no botão X
+        document.getElementById('fechar').addEventListener('click', fecharModal);
+
+        // Fechar modal ao clicar fora do conteúdo
+        document.getElementById('janela-modal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                fecharModal();
+            }
+        });
+    </script>
+</body>
+</html>
+<!------------------------------------------------>
+
+<!------------------------------------------------>
+<!----------------- BY RZHARO -------------------->
+<!------------------------------------------------>
